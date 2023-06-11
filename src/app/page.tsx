@@ -16,20 +16,6 @@ export default function Home() {
   useEffect(() => {
     async () => {
       const liff = (await import("@line/liff")).default;
-      try {
-        await liff.init({ liffId: "1660806822-nwa8VvQj" });
-      } catch (error) {
-        console.error("liff init error", error);
-      }
-      if (!liff.isLoggedIn()) {
-        liff.login();
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    async () => {
-      const liff = (await import("@line/liff")).default;
       await liff.ready;
       const profile = await liff.getProfile();
       setProfile(profile);
