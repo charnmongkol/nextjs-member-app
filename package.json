@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@line/liff": "^2.22.1",
     "@prisma/client": "^4.15.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.8",
